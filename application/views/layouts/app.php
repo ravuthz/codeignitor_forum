@@ -28,7 +28,16 @@
                 </ul>
             </header>
             <section class="main">
-                <?php $this->load->view($subview); ?>
+                <?php
+                    // parser html
+                    if (isset($html)) {
+                        echo $html;    
+                    }
+                    // load the view
+                    if (isset($subview)) {
+                        $this->load->view($subview);
+                    }
+                ?>
             </section>
             <footer>
                 &copy;<?php echo date('Y'); ?>
