@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Ask Me Now</title>
         
-        <link rel="stylesheet" href="asset/css/style.css" type="text/css" />
+        <link rel="stylesheet" href="<?php echo base_url('asset/css/style.css'); ?>" type="text/css" />
     </head>
     <body>
         <div class="container">
