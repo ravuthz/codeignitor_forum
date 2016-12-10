@@ -1,15 +1,27 @@
-<h1>Welcome to CodeIgniter!</h1>
+<style type="text/css">
+	.main div {
+		float: left;
+		width: 100%;
+	}
+</style>
 
-<div id="body">
-	<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-	<p>If you would like to edit this page you'll find it located at:</p>
-	<code>application/views/welcome_message.php</code>
-
-	<p>The corresponding controller for this page is found at:</p>
-	<code>application/controllers/Welcome.php</code>
-
-	<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
+<div>
+	<h1>Listing questions</h1>
 </div>
 
-<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+<div>
+	<ol>
+		{questions}
+			<li>{subject}</li>
+		{/questions}
+	</ol>
+</div>
+	
+<div>
+	<p style="color: green;">
+		Page rendered in <strong>{elapsed_time}</strong> seconds.
+		<?php if (ENVIRONMENT === 'development'): ?>
+			CodeIgniter Version <strong><?php echo CI_VERSION; ?></strong>
+		<?php endif; ?>
+	</p>
+</div>
